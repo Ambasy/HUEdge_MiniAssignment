@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "70989356-956a-4332-820c-09cbe4dd212a",
+		"name": "HUEdge-MiniAssignment1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetByDirectorAndYear",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/movies/directedBy?directorName=Urban Gad&fromYear=1900&toYear=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movies",
+						"directedBy"
+					],
+					"query": [
+						{
+							"key": "directorName",
+							"value": "Urban Gad"
+						},
+						{
+							"key": "fromYear",
+							"value": "1900"
+						},
+						{
+							"key": "toYear",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByBudget",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/movies/MaxBudget?year=1913&country=Italy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movies",
+						"MaxBudget"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "1913"
+						},
+						{
+							"key": "country",
+							"value": "Italy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByRating",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "token",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/movies/rating?review=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movies",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "review",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthorizationCheck",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"type": "text",
+						"value": "tokensdh"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8081/movies/rating?review=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"movies",
+						"rating"
+					],
+					"query": [
+						{
+							"key": "review",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
